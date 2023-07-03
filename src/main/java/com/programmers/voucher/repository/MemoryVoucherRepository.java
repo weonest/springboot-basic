@@ -30,6 +30,5 @@ public class MemoryVoucherRepository implements VoucherRepository {
     public Voucher findById(UUID voucherId) {
         if (!STORAGE.containsKey(voucherId)) throw new NoSuchElementException(NOT_FOUND_ERROR_MESSAGE);
         return STORAGE.get(voucherId);
-
     }
 }
